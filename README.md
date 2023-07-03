@@ -1,4 +1,4 @@
-<img src="https://capsule-render.vercel.app/api?type=waving&color=lightblue&wheight=200&section=header&text=Real%20time%20CLIP%20prefix%20captioning&fontSize=50"/>
+<img src="https://capsule-render.vercel.app/api?type=waving&color=FD866E&wheight=200&section=header&text=Real%20time%20CLIP%20prefix%20captioning&fontSize=50"/>
 <div>
 <img src="https://img.shields.io/badge/visualstudiocode-007ACC?style=flat&logo=visualstudiocode&logoColor=white">
 <img src="https://img.shields.io/badge/Python-3776AB?style=flat&logo=Python&logoColor=white">
