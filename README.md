@@ -1,20 +1,11 @@
 <img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&wheight=200&section=header&text=Real%20time%20CLIP%20prefix%20captioning&fontSize=50"/>
-<div>
+<div>Tech Stack : 
 <img src="https://img.shields.io/badge/visualstudiocode-007ACC?style=flat&logo=visualstudiocode&logoColor=white">
 <img src="https://img.shields.io/badge/Python-3776AB?style=flat&logo=Python&logoColor=white">
 <img src="https://img.shields.io/badge/OpenCV-5C3EE8?style=flat&logo=OpenCV&logoColor=white">
 <img src="https://img.shields.io/badge/openai-412991?style=flat&logo=openai&logoColor=white">
 </div>
 Inference Notebook: <a href="https://colab.research.google.com/drive/1tuoAC5F4sC7qid56Z0ap-stR3rwdk0ZV?usp=sharing"><img src="https://colab.research.google.com/assets/colab-badge.svg" height=20></a>  
-
-
-
-
-
-## Official implementation for the paper ["ClipCap: CLIP Prefix for Image Captioning"](https://arxiv.org/abs/2111.09734)
-
-
-
 
 ## Description  
 Image captioning is a complicated task, where usually a pretrained detection network is used, requires additional supervision in the form of object annotation. We present a new approach that does not requires additional information (i.e. requires only images and captions), thus can be applied to any data. In addition, our model's training time is much faster than similar methods while achieving comparable to state-of-the-art results, even for the Conceptual Captions dataset contains over 3M images. 
