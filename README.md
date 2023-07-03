@@ -161,6 +161,6 @@ This repository is heavily based on [CLIP](https://github.com/openai/CLIP) and [
 For training we used the data of [COCO dataset](https://cocodataset.org/#home) and [Conceptual Captions](https://ai.google.com/research/ConceptualCaptions/).
 
 ## Contact
-For any inquiry please contact us at our email addresses: ron.mokady@gmail.com or amirhertz@mail.tau.ac.il.
+please contact us at our email addresses: por1329@naver.com
 
 
