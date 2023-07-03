@@ -1,6 +1,7 @@
 # Real-time CLIP prefix captioning.
 
 <a href="https://opensource.org/licenses/MIT"><img src="https://img.shields.io/badge/Python-3776AB?style=flat&logo=Python&logoColor=white"></a>  
+<a href="https://opensource.org/licenses/MIT"><img src="https://img.shields.io/badge/OpenCV-5C3EE8?style=flat&logo=OpenCV&logoColor=white"></a>  
 Inference Notebook: <a href="https://colab.research.google.com/drive/1tuoAC5F4sC7qid56Z0ap-stR3rwdk0ZV?usp=sharing"><img src="https://colab.research.google.com/assets/colab-badge.svg" height=20></a>  
 
 
