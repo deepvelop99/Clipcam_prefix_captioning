@@ -1,4 +1,4 @@
-<img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&wheight=200&section=header&text=Real%20time%20CLIP%20prefix%20captioning&fontSize=50"/>
+<img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&wheight=200&section=header&text=Generate%20synthetic%20data%20based%20on%20images&fontSize=40"/>
 <div>Tech Stack : 
 <img src="https://img.shields.io/badge/visualstudiocode-007ACC?style=flat&logo=visualstudiocode&logoColor=white">
 <img src="https://img.shields.io/badge/Python-3776AB?style=flat&logo=Python&logoColor=white">
