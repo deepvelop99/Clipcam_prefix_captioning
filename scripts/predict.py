@@ -10,7 +10,7 @@ import torch
 import torch.nn.functional as nnf
 import sys
 from typing import Tuple, List, Union, Optional
-from transformers import GPT2Tokenizer, GPT2LMHeadModel, AdamW, get_linear_schedule_with_warmup
+from transformers import GPT2Tokenizer, GPT2LMHeadModel, AdamW, get_linear_schedule_with_warmup, PreTrainedTokenizerFast, AutoModelWithLMHead
 from tqdm import tqdm, trange
 import skimage.io as io
 import PIL.Image
@@ -255,8 +255,15 @@ def inference(img_path, model_name):
         generated_text_prefix = generate2(model, tokenizer, embed=prefix_embed)
     return generated_text_prefix
 
-img_path = "img.jpg"
+from googletrans import Translator
+def translate_text(text):
+    translator = Translator()
+    result = translator.translate(text, dest='ko')
+    return result.text
+img_path = "Images/test.jpg"
 model_name = "COCO"
 # Use Clipcap Model
 result = inference(img_path, model_name)
+result = translate_text(result)
+result = result.encode('utf-8').decode('utf-8')
 print(result)

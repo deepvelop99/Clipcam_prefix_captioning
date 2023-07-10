@@ -13,6 +13,7 @@ from tqdm import tqdm, trange
 import skimage.io as io
 import PIL.Image
 from PIL import Image, ImageDraw, ImageFont
+from googletrans import Translator
 
 N = type(None)
 V = np.array
@@ -267,9 +268,12 @@ class WebcamCaption:
         return model
 
     def predict(self):
-        font = ImageFont.truetype("arial.ttf", 20)
+        font = ImageFont.truetype("font/SDMiSaeng.ttf", 20)
         capture = cv2.VideoCapture(0)
-
+        def translate_text(text):
+                    translator = Translator()
+                    result = translator.translate(text, dest='ko')
+                    return result.text
         while True:
             ret, frame = capture.read()
 
@@ -281,13 +285,14 @@ class WebcamCaption:
                 image = self.preprocess(image).unsqueeze(0).to(self.device)
                 prefix = self.clip_model.encode_image(image).to(self.device, dtype=torch.float32)
                 prefix_embed = self.model.clip_project(prefix).reshape(1, self.prefix_length, -1)
-
+                
                 use_beam_search = False
                 if use_beam_search:
                     generated_text_prefix = generate_beam(self.model, self.tokenizer, embed=prefix_embed)[0]
                 else:
                     generated_text_prefix = generate2(self.model, self.tokenizer, embed=prefix_embed)
-
+                generated_text_prefix = translate_text(generated_text_prefix)
+                generated_text_prefix = generated_text_prefix.encode('utf-8').decode('utf-8')
                 pil_frame = Image.fromarray(frame)
                 draw = ImageDraw.Draw(pil_frame)
                 draw.text((10, 10), generated_text_prefix, font=font, fill=(255, 255, 255))

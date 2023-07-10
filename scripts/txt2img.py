@@ -99,7 +99,7 @@ def check_safety(x_image):
 def main():
     parser = argparse.ArgumentParser()
 
-    img_path = "img.jpg"
+    img_path = "Images/test.jpg"
     model_name = "COCO"
     # Use Clipcap Model
     result = inference(img_path, model_name)
